@@ -1,0 +1,70 @@
+#login{
+    background-color: #000000b5;
+    color: white;
+    width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px 60px 50px 60px;
+    /* border: 10px solid white; */
+    border-radius: 5px;
+    
+ }
+
+ /*Aplicar los estilos a todas las etiquetas h1 que esten dentro de la etiqueta
+ con id login*/
+ #login h1{
+    /*font-family: FuenteExotica,'Helvetica Neue',Helvetica,Arial,sans-serif;*/
+    font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+    font-size:32px;
+ }
+
+ #login input[type="text"], #login input[type="password"] {
+    background-color: #333333;
+    width: 100%;
+    font-size: 1.2em;
+    border-width: 0px;
+    border-radius: 5px;
+    padding: 14px;
+    margin-bottom:20px;
+    box-sizing: border-box; /*Evitar que se sobrepase los input*/
+    color:white;
+ }
+
+ /*Aplicar estilos a etiquetas input con el atributo type="button" y que este dentro
+ de una etiqueta con el id #login
+ */
+ #login input[type="button"]{
+    background-color: #E50914;
+    border: 0;
+    width: 100%;
+    padding: 19px;
+    color: white;
+    font-size: 1.1em;
+    font-weight: bold;
+    border-radius: 14px;
+    cursor:pointer;
+}
+#login input[type="button"]:hover{
+    background-color:rgb(151, 0, 8);
+}
+#login a{
+   color:rgb(214, 214, 214);
+   text-decoration: none;
+   font-size:14px;
+}
+
+/*Aplicar los estilos definidos cuando se pase el cursor sobre la etiqueta que 
+cumpla con el selector*/
+#login a:hover{
+    text-decoration:underline;
+    color:red;
+}
+
+/*#login:hover{
+    background-color:rgba(255, 0, 0, 0.623);
+}*/
+
+
+.fondo-verde{
+    background-color: rgb(2, 255, 2);
+}
