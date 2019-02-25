@@ -73,7 +73,7 @@ document.write('<h1 id="ccc" class="">Hola</h1>');
 
 function ejecutarFuncion(f, ejecutar){
     if (ejecutar)
-        f();
+        f();//Aqui ejecuta la funcion de parametro.
     else
         console.log("No se ejecutara la funcion");
 }
@@ -90,3 +90,9 @@ ejecutarFuncion(function(){ console.log("Que loco esto"); }, true);
 (function(){
     console.log("Se esta ejecutando esto? 0_0");
 })();
+
+var funcionX = function(){
+    console.log("Se esta ejecutando esto? 0_0");
+}
+
+functionX();
