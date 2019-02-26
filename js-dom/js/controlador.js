@@ -8,6 +8,15 @@ Controlador: Controlar los eventos del usuario, definir comportamientos y accion
 */
 
 function login(){
-    console.log("Usuario: " + document.getElementById('usuario').value);
-    console.log("Password: " + document.getElementById('password').value);
+    if (document.getElementById('usuario').value == ''){
+        document.getElementById('error-usuario').style.display = 'block';
+        document.getElementById('usuario').classList.add('input-error');
+    }
+
+    if (document.getElementById('password').value == ''){
+        document.getElementById('error-password').style.display = 'block';
+        document.getElementById('password').classList.add('input-error');
+    }
+
+
 }
