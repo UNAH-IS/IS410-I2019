@@ -8,15 +8,32 @@ Controlador: Controlar los eventos del usuario, definir comportamientos y accion
 */
 
 function login(){
-    if (document.getElementById('usuario').value == ''){
-        document.getElementById('error-usuario').style.display = 'block';
-        document.getElementById('usuario').classList.add('input-error');
+    var resultado = [];
+    
+    resultado[0] = validarCampoVacio('nombre');
+    resultado[1] = validarCampoVacio('apellido');
+    resultado[2] = validarCampoVacio('email');
+    resultado[3] = validarCampoVacio('usuario');
+    resultado[4] = validarCampoVacio('password');
+
+    if (
+        resultado[0]&&
+        resultado[1]&&
+        resultado[2]&&
+        resultado[3]&&
+        resultado[4]
+    )
+        document.getElementById('div-exito').style.display = 'block';
+}
+
+
+function validarCampoVacio(id){
+    if (document.getElementById(id).value == ''){
+        document.getElementById('div-error-'+id).style.display = 'block';
+        document.getElementById(id).classList.add('input-error');
+        return false;
     }
-
-    if (document.getElementById('password').value == ''){
-        document.getElementById('error-password').style.display = 'block';
-        document.getElementById('password').classList.add('input-error');
-    }
-
-
+    document.getElementById('div-error-'+id).style.display = 'none';
+    document.getElementById(id).classList.remove('input-error');
+    return true;
 }

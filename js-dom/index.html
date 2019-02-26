@@ -15,6 +15,15 @@
             display:none;
         }
 
+        .exito{
+            color: #06b81e;
+            padding: 2px 0px 10px 0px;
+            font-size: 9px;
+            border-radius: 4px;
+            width: fit-content;
+            display:none;
+        }
+
         .input-error{
             border: 1px solid #ea4e4e;
         }
@@ -22,10 +31,19 @@
 </head>
 <body>
     <form>
+        <input id="nombre" type="text" placeholder="Nombre"><br>
+        <div id="div-error-nombre" class="error">Ingrese el nombre</div>
+        <input id="apellido" type="text" placeholder="Apellido"><br>
+        <div id="div-error-apellido" class="error">Ingrese el apellido</div>
+        <input id="email" type="text" placeholder="Email"><br>
+        <div id="div-error-email" class="error">Ingrese el email</div>
         <input id="usuario" type="text" placeholder="Usuario"><br>
-        <div id="error-usuario" class="error">Ingrese el usuario</div>
+        <div id="div-error-usuario" class="error">Ingrese el usuario</div>
         <input id="password" type="password" placeholder="Password"><br>
-        <div id="error-password" class="error">Ingrese el password</div>
+        <div id="div-error-password" class="error">Ingrese el password</div>
+        <div class="exito" id="div-exito">
+            Registro realizado con éxito
+        </div>
         <button type="button" onclick="login();">Registro</button>
     </form>
     <script src="js/controlador.js"></script>
