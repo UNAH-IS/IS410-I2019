@@ -95,4 +95,28 @@ var funcionX = function(){
     console.log("Se esta ejecutando esto? 0_0");
 }
 
-functionX();
+//functionX();
+
+
+
+
+
+
+
+
+
+var x=5;
+var multiplicar = function(a,b){
+    return a*b;
+}
+
+console.log(x);
+console.log('Resultado de la multiplicacion: '+multiplicar(5,6));
+
+
+
+
+
+
+
+
