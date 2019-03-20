@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <form action="procesar.php" method="POST">
+        <input value="Juan" name="nombre" type="text" placeholder="Nombre"><br>
+        <input value="Perez" name="apellido" type="text" placeholder="Apellido"><br>
+        <input value="jperez@gmail.com" name="email" type="text" placeholder="Email" onkeyup="validarCorreo(this);"><br>
+        <input value="jperez" name="usuario" type="text" placeholder="Usuario"><br>
+        <select name="pais">
+            <option value="Honduras">Honduras</option>
+            <option value="Guatemala">Guatemala</option>
+            <option value="Costarica">Costarica</option>
+            <option value="Panama">Panama</option>
+            <option value="El Salvador">El Salvador</option>
+        </select>
+        <input value="asd.456" name="password" type="password" placeholder="Password"><br>        
+        <button type="submit">Registro</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .parrafo-verde{
+            background-color:green;
+            font-weight: bold;
+            font-size:10px;
+            transition: 5s background-color;
+            transition: 3s font-size;
+        }
+
+        .parrafo-rojo{
+            background-color:red;
+            text-decoration: underline;
+            font-size:30px;
+            transition: 5s background-color;
+            transition: 3s font-size;
+        }
+    </style>
+</head>
+<body>
+   <input id="usuario" value="Juan" type="text" placeholder="Usuario">
+   <input id="password" type="password" placeholder="Password">
+   <button id="btn-ver-password" type="button">Ver Password</button>
+   <button id="btn-login" type="button">Login</button>
+   <div id="resultado"></div>
+   <div id="contenido">
+       Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, aliquid earum? Nostrum quis consequuntur dolores dolorum harum! A asperiores et fugiat cum voluptatem doloribus enim facere architecto aut sequi! Quas nam voluptate, similique dolorem recusandae est quod ad totam vero! Sed, repellendus quasi eveniet unde nisi rem accusamus nihil nulla facilis quaerat debitis pariatur assumenda officiis suscipit fugiat praesentium quod! Cum amet minus, reprehenderit fugit doloremque, totam architecto perspiciatis quos ipsam omnis quod? Error, rem repellendus? Saepe pariatur mollitia id cumque consectetur voluptas quam, repellat aliquam repellendus eveniet voluptatem doloremque error labore veniam minus hic? Minus quia eum omnis alias.
+   </div>
+   <button id="btn-agregar-estilos" type="button">Asignar estilos</button>
+   <button id="btn-parrafo-verde" type="button">Parrafo verde</button>
+   <button id="btn-parrafo-rojo" type="button">Parrafo rojo</button>
+   <button id="btn-mostrar-parrafo" type="button">Mostrar Parrafo</button>
+   <button id="btn-ocultar-parrafo" type="button">Ocultar Parrafo</button>
+   <script src="js/jquery-3.3.1.min.js"></script>
+
+   <script>
+       $(document).ready(function(){
+           //Esto se ejecuta cuando el DOM esta cargado por completo.
+           $('#usuario').attr("placeholder","Ingrese el usuario");
+       });
+
+       $('#btn-login').click(function(){
+            //$('#usuario').val() + ', ' + $('#password').val()
+            $('#resultado').html(`Datos: ${$('#usuario').val()} , ${$('#password').val()}`);
+            console.log($('#usuario').val()); //objeto
+            //document.getElementById('resultado').innerHTML =document.getElementById('usuario').value; //objeto
+            console.log($('#password').val()); //objeto
+       });
+
+       $('#btn-agregar-estilos').click(function(){
+           $('#contenido').css("background-color","black");
+           $('#contenido').css("color","white");
+       });
+       $("#btn-parrafo-verde").click(function(){
+            $('#contenido').removeAttr('style');
+            $('#contenido').removeClass("parrafo-rojo");    
+            $('#contenido').addClass("parrafo-verde");
+        });
+        $("#btn-parrafo-rojo").click(function(){
+            $('#contenido').removeAttr('style');
+            $('#contenido').removeClass("parrafo-verde");
+            $('#contenido').addClass("parrafo-rojo");
+        });
+        $('#btn-ver-password').click(function(){
+            $('#password').attr('type','text');
+        });
+
+        $('#btn-mostrar-parrafo').click(function(){
+            $('#contenido').fadeIn(2000);
+        });
+        $('#btn-ocultar-parrafo').click(function(){
+            $('#contenido').fadeOut(2000);
+        });
+   </script>
+</body>
+</html>

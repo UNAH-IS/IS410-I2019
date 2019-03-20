@@ -1,0 +1,30 @@
+.bg-dark{
+    background-color:#3E5B99 !important;
+}
+
+#form-login{
+    margin-left:auto;
+}
+
+#form-login input[type="text"], #form-login input[type="password"]{
+    font-size:11px;
+}
+
+.navbar{
+    padding-left: 15rem;
+    padding-right: 15rem;
+}
+
+@media only screen and (max-width:576px){
+    .navbar {
+        padding-left: 2rem;
+        padding-right: 1rem;
+    }
+}
+
+.btn-primary{
+    background-color: #1c3970;
+    border-color: #1c3970;
+    font-size:12px;
+}
+
