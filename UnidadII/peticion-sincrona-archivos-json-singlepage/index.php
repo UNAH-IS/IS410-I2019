@@ -1,10 +1,11 @@
 <?php
-    
-    if (!isset($_POST["nombre"])){//isset se utiliza para verificar si una variable esta inicializada.
+    //echo "Resultado: " . empty($_POST);
+    if (!empty($_POST)){//empty verifica si una variable o arreglo esta vacio
         $archivo = fopen('usuarios.json','a+'); //r Lectura, w Escritura, a+ Anexar
         fwrite($archivo,json_encode($_POST)."\n"); //Convertir arreglo a cadena JSON
         fclose($archivo);
         echo "Se guardo la información";
+        sleep(16);
     }
 ?>
 <!DOCTYPE html>

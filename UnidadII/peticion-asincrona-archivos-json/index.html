@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <form>
+        <input value="Juan" id="nombre" type="text" placeholder="Nombre"><br>
+        <input value="Perez" id="apellido" type="text" placeholder="Apellido"><br>
+        <input value="jperez@gmail.com" id="email" type="text" placeholder="Email" onkeyup="validarCorreo(this);"><br>
+        <input value="jperez" id="usuario" type="text" placeholder="Usuario"><br>
+        <select id="pais">
+            <option value="Honduras">Honduras</option>
+            <option value="Guatemala">Guatemala</option>
+            <option value="Costarica">Costarica</option>
+            <option value="Panama">Panama</option>
+            <option value="El Salvador">El Salvador</option>
+        </select>
+        <input value="asd.456" id="password" type="password" placeholder="Password"><br>        
+        <button id="btn-guardar" type="button">Guardar</button>
+    </form>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script>
+        $('#btn-guardar').click(function(){
+            console.log('Ejecutar peticion asincrona');
+            //Funcion de jquery para peticiones asincronas.
+            $.ajax({
+                url:"procesar.php",
+                method:"POST",
+                data:"", //La información en formato URLEncoded
+                success:function(){
+                    //Se ejecutara cuando sea exitoso
+                },
+                error:function(){
+                    //Se ejecutara cuando sea erroneo
+                }
+            });
+        });
+    </script>
+</body>
+</html>
