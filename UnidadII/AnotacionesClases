@@ -1,0 +1,29 @@
+Constructor:
+    *Es un metodo, el primero en ejecutarse al crear una instancia.
+    *Usualmente se utiliza para inicializar atributos de la clase u otros objetos internos.
+
+    Java: Tiene el mismo nombre de la clase, puede existir más de un constructor.
+    PHP: El nombre debe ser __construct, solo puede haber un constructor porque PHP no soporta sobrecarga, aunque se puede simular utilizando parametros por defecto.
+
+
+
+Pilares de la POO
+Encapsulacion:
+Abstracción: Crear funcionalidades que usen otros programadores sin necesidad de que ellos entiendan como funciona.
+Herencia: Es la funcionalidad que permite reutilizar el codigo identificando atributos en comun de un conjunto de clases bajo el mismo contexto y encapsulandolos en una nueva clase la cual se le denomina clase padre, super clase o clase base, luego se definen nuevas clases que se extienden a partir de la clase padre, estas se les denomina clases hijas, subclases o clases derivadas.
+
+    Clases Abstractas(Abstract): Son clases tambien conocidas como clases resumen, se utilizan generalmente como clases padre. Definen una plantilla o estructura base para ser extendida por otras clases.
+    Caracteristicas:
+        *No se pueden instanciar.
+        *A pesar de que no se puedan instanciar si tienen constructor.
+        *Puede o no tener metodos abstractos.
+        *Con un metodo que sea abstracto la clase debe ser abstracta.
+        *Los metodos abstractos no tienen cuerpo, es decir solo se declaran, no se definen.
+        *Obligatoriamente se deben redefinir en clases hijas.
+
+
+****static: Modificador que permite acceder a atributos o metodos sin necesidad de instanciar una clase. Ademas, en el caso de los atributos mantienen un valor compartido para cualquier instancia del mismo tipo;
+    Interfaces
+
+
+Polimorfismo:
