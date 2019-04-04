@@ -23,7 +23,40 @@ Herencia: Es la funcionalidad que permite reutilizar el codigo identificando atr
 
 
 ****static: Modificador que permite acceder a atributos o metodos sin necesidad de instanciar una clase. Ademas, en el caso de los atributos mantienen un valor compartido para cualquier instancia del mismo tipo;
-    Interfaces
+    
+    Interfaces: Son estructuras de datos más simples que una clase, tambien es conocida como clase abstracta pura y posee las siguientes caracteristicas
+        *No se pueden instanciar.
+        *No tienen constructor.
+        *Todos sus metodos son abstractos
+        *Se utilizan para simular la herencia multiple, es posible tener multiples interfaces padre.
+        *Para aplicar herencia entre una clase e interfaces se utiliza implements.
+        *Para aplicar herencia entre interfaces se utiliza extends.
+
+        *En Java los atributos deben ser public static final.
 
 
-Polimorfismo:
+Polimorfismo: En programación orientada a objetos, el polimorfismo se refiere a la propiedad por la que es posible ejecutar funcionalidades sintácticamente iguales a objetos de tipos distintos. 
+
+
+
+
+
+
+Tecnicamente como podemos hacer uso de polimorfismo:
+    *Sobreescritura de metodos.
+        Contenido 
+            Noticia
+            Articulo
+
+        $n = new Noticia();
+        $a = new Articulo();
+        $n->guardar();
+        $a->guardar();
+        
+    *Sobrecarga de metodos
+            Noticia n = new Noticia();
+            n.publicar();
+            n.publicar("Titulo");
+            n.publicar("Titulo","Lorem ipsum");
+
+
