@@ -13,7 +13,7 @@ $('#btn-guardar').click(function(){
 
     //Funcion de jquery para peticiones asincronas.
     $.ajax({
-        url:"ajax/guardar-usuario.php",
+        url:"ajax/usuarios.php?accion=guardar",
         method:"POST",
         data:parametros, //La información en formato URLEncoded
         dataType: 'json', //tipo de dato de retorno, por defecto es html
@@ -41,7 +41,7 @@ $(document).ready(function(){
     //Aquí el DOM ha sido cargado..
     console.log('Obtener lista de usuarios');
     $.ajax({
-        url:"ajax/obtener-usuarios.php",
+        url:"ajax/usuarios.php?accion=listar",
         dataType:"json",
         success:function(respuesta){
             console.log("La respuesta del servidor es: ");
