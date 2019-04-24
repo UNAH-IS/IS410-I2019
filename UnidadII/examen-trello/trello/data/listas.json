@@ -1,1 +1,8 @@
- 
+[
+{"codigoLista":1,"nombreLista":"Lista 1","codigoUsuario":1,"codigoTablero":1},
+{"codigoLista":2,"nombreLista":"Lista 2","codigoUsuario":1,"codigoTablero":1},
+{"codigoLista":3,"nombreLista":"Lista 3","codigoUsuario":1,"codigoTablero":1},
+{"codigoLista":4,"nombreLista":"Lista 4","codigoUsuario":2,"codigoTablero":2},
+{"codigoLista":5,"nombreLista":"Lista 5","codigoUsuario":2,"codigoTablero":2},
+{"codigoLista":6,"nombreLista":"Lista 6","codigoUsuario":2,"codigoTablero":2}
+]

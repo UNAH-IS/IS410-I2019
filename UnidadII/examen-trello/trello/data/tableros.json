@@ -1,0 +1,15 @@
+[
+    {
+        "codigoTablero":1,
+        "titulo":"Tablero 1"
+    },
+    {
+        "codigoTablero":2,
+        "titulo":"Tablero 2"
+    },
+    {
+        "codigoTablero":3,
+        "titulo":"Tablero 3"
+    },
+    {"codigoTablero":4,"titulo":"Tablero nuevo"}
+]
