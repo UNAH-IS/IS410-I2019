@@ -121,5 +121,19 @@
 
                         return $this;
             }
+
+            public function guardarTarjeta(){
+                $tarjetas = json_decode(file_get_contents("../data/tarjetas.json"),true);
+                
+                $t["codigoTarjeta"]=($tarjetas[count($tarjetas)-1]["codigoTarjeta"])+1;
+                $t["codigoLista"]=$this->codigoLista;
+                $t["contenidoTarjeta"]=$this->contenidoTarjeta;
+                $t["codigoUsuario"]=$this->codigoUsuario;
+                $t["fechaCreacion"]=$this->fechaCreacion;
+                
+                $tarjetas[] = $t;
+                $archivo = fopen("../data/tarjetas.json","w");
+                fwrite($archivo, json_encode($tarjetas));
+            }
     }
 ?>
