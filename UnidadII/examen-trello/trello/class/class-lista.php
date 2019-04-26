@@ -75,5 +75,17 @@
 
                 return $this;
         }
+
+        public static function obtenerListas($codigoTablero){
+                $registros = json_decode(file_get_contents("../data/listas.json"),true);
+                $resultado = array();
+                for ($i=0;$i<count($registros);$i++){
+                        if ($registros[$i]["codigoTablero"]==$codigoTablero){
+                                $resultado[] = $registros[$i];
+                        }
+                }
+                $registros = null;
+                return json_encode($resultado);
+        }
     }
 ?>

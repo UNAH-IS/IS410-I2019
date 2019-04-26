@@ -34,6 +34,33 @@ $(document).ready(function(){
 			console.log(res);
 			for(var i=0;i<res.length;i++){
 				$("#tableros").append(`<option value="${res[i].codigoTablero}">${res[i].titulo}</option>`);
+				$("#tableros").val(null);
+			}
+		},
+		error:function(error){
+			console.error(error);
+		}
+	});
+});
+
+
+$("#tableros").change(function(){
+	console.log('Peticion AJAX para obtener la listas del tablero '+$("#tableros").val());
+	$("#div-listas").html("");
+	$.ajax({
+		url:"ajax/listas.php?accion=listar&codigoTablero="+$("#tableros").val(),
+		dataType:"json",
+		success:function(res){
+			console.log(res);
+			for(var i=0;i<res.length;i++){
+				$("#div-listas").append(`
+				<div class="well list" id="div-lista-1">
+					<h4>${res[i].nombreLista}</h4>
+					<p><textarea class="form-control" placeholder="Tarea" id="txt-tarjeta-lista-1"></textarea>
+					<input type="date" class="form-control date" name="txt-fecha-lista-1" placeholder="Fecha">
+					<button class="btn btn-default" role="button"  onclick="agregarTarjeta(1);">Agregar tarjeta</button></p>
+				</div>
+				`);
 			}
 		},
 		error:function(error){
